@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function lineBreak() {
+        document.write("<br><br>");
+    }
+
+    function output(text) {
+        document.write(text);
+        lineBreak();
+    }
+    var number = 4;
+   // var number = Math.round(Math.random() * 10);
+    var tentatives = 1;
+
+    while (tentatives <= 3) {
+        var guess = parseInt(prompt("Enter your guess: "));
+
+        if (guess == number) {
+            output("You got it!");
+            break;
+        
+        } else {
+            if(tentatives == 3){
+                output("Wrong! the number was: " + number);
+            }
+            else {
+                output("Wrong!");
+            }
+        }
+        tentatives++;
+    }
+
+    output("The end.")
+
+</script>

@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+
+<input />
+
+<button> Compare with my secret</button>
+
+<script>
+
+    function sort() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sortNumbers(quantity) {
+        var secrets = [];
+        var number = 1;
+
+        while (number <= quantity) {
+
+            var sortedNumber = sort();
+            var find = false;
+
+            if (sortedNumber !== 0) {
+
+                for (var i = 0; i < secrets.length; i++) {
+                    if (secrets[i] == sortedNumber) {
+                        find = true;
+                        break;
+                    }
+                }
+
+                if (find == false) {
+                    secrets.push(sortedNumber);
+                    number++;
+                }
+            }
+        }
+        return secrets;
+    }
+    
+    var secrets = sortNumbers(5);
+    console.log(secrets);
+
+
+    var input = document.querySelector("input"); //get "<input/>" value from html
+    input.focus();
+
+
+    function verify() {
+
+        var find = false;
+
+        for (var i = 0; i < secrets.length; i++) {
+            if (input.value == secrets[i]) {
+                alert("You got it!");
+                find = true;
+                break;
+            }
+        }
+
+        if (find == false) {
+            alert("You misssed!");
+        }
+
+        input.value = "";  // clear the box
+        input.focus(); // select the 
+
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verify;
+
+</script>

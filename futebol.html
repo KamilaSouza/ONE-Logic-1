@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function lineBreak() {
+        document.write("<br><br>");
+    }
+
+    function output(text) {
+        document.write(text);
+        lineBreak();
+    }
+
+    var victories = parseInt(prompt("Enter the number of your victories: "));
+    var draws = parseInt(prompt("Enter the number of your draws: "));
+
+    var score = victories * 3 + draws;
+    //prompt output is a string
+
+    output("Your team score is: " + score);
+
+    if (score > 28) {
+        output("Your team is better than last year!");
+    } else if (score == 28) {
+        output("Your team score is the same as last year!");
+    } else {
+        output("Your team is worst than last year!");
+    }
+</script>

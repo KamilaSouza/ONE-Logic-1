@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function lineBreak() {
+        document.write("<br><br>");
+    }
+
+    function output(text) {
+        document.write(text);
+        lineBreak();
+    }
+
+    function calcultateBMI(weight, height) {
+        return weight / (height * height);
+    }
+
+    var inputName = prompt("Enter your name: ");
+    var inputWeight = prompt(inputName + " enter your weight: ");
+    var inputHeight = prompt(inputName + " enter your height: ");
+
+    // var sumBmc = calcultateBMI(119, 1.8) + calcultateBMI(59, 1.61);
+    var bMI = calcultateBMI(inputWeight, inputHeight);
+    output(inputName + " your BMI is: " + bMI);
+
+    if(bMI < 18.5){
+        output("Your are underweight!");
+    }
+    if(bMI >= 18.5 && bMI <= 24.5){
+        output("Your are normal!");
+    }
+    if(bMI >= 25 && bMI <= 29.9){
+        output("Your are overweight!");
+    }
+    if(bMI >= 30 && bMI <= 34.9){
+        output("Your are obese!");
+    }
+    if(bMI >= 35){
+        output("Your are extremly obese!");
+    }
+
+
+
+</script>

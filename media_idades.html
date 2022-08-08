@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function lineBreak() {
+        document.write("<br><br>");
+    }
+
+    function output(text) {
+        document.write(text);
+        lineBreak();
+    }
+
+    var relatives = parseInt(prompt("How many relatives do you have? "));
+    var sum = 0;
+
+    for (var i = 1; i <= relatives; i++) {
+        var number = parseInt(prompt("Enter relative age: "));
+        sum = sum + number;
+    }
+
+    media = sum / relatives;
+    output("Your relatives age media is: " + media);
+
+    output("The end.");
+
+
+</script>

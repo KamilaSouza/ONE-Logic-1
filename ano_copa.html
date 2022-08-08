@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function lineBreak() {
+        document.write("<br><br>");
+    }
+
+    function output(text) {
+        document.write(text);
+        lineBreak();
+    }
+
+    var limit = parseInt(prompt("Enter limit data: "));
+    var cupYear = 1930;
+
+    while (cupYear <= limit) {
+        output(cupYear + " is a cup year!");
+        cupYear = cupYear + 4;
+    }
+
+    output("The end.");
+</script>
